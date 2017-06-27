@@ -191,7 +191,7 @@ endif()
 
 if (NOT CMAKE_CONFIGURATION_TYPES AND LIBCXXABI_INSTALL_LIBRARY)
   add_custom_target(install-cxxabi
-    DEPENDS cxxabi
+    DEPENDS cxxabi install-cxxabi-headers
     COMMAND "${CMAKE_COMMAND}"
             -DCMAKE_INSTALL_COMPONENT=cxxabi
             -P "${LIBCXXABI_BINARY_DIR}/cmake_install.cmake")
