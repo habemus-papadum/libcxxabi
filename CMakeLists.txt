@@ -401,6 +401,8 @@ set(LIBCXXABI_LIBUNWIND_PATH "${LIBCXXABI_LIBUNWIND_PATH}" CACHE PATH
     "Specify path to libunwind source." FORCE)
 
 include_directories(include)
+add_subdirectory(include)
+
 if (LIBCXXABI_USE_LLVM_UNWINDER OR LLVM_NATIVE_ARCH MATCHES ARM)
   find_path(
     LIBCXXABI_LIBUNWIND_INCLUDES_INTERNAL
